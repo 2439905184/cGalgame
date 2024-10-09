@@ -1,0 +1,17 @@
+项目导入vscode
+控制台执行（ctrl + ~调出控制台）：npm install
+npm install安装完必要环境后，可尝试运行项目
+
+运行项目输入：npm run serce
+运行结束控制台输出网站
+
+打包成网站：npm run build
+打包后在当前项目dist目录下，运行index.htm
+
+打包电脑EXE文件：
+先使用打包网站命令，生成dist目录，再往下看
+控制台输入：npx electron-packager . MyAppName --platform=win32 --arch=x64 --out=release-builds --overwrite --asar --app-version=1.0.0 --icon=icon.ico --prune=true
+打包后会在项目生成release-builds目录，里面执行exe文件即可
+
+打包手机App：
+生成dist目录，然后使用uniapp开发工具HBuilder，打开HBuilder后，导入下载好的cGalgameApp(软件基座)目录，然后复制你打包的dist目录所有文件，直接粘贴到cGalgameApp(软件基座)目录，随后打包成App即可
